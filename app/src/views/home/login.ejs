@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script src="/js/home/login.js"></script>
-  <title>Document</title> 
+  <script defer src="/js/home/login.js"></script>
+  <title>Document</title>
 </head>
 
 <body>
@@ -14,11 +14,17 @@
     <main id="content">
       <h1>로그인화면</h1>
       <section class="login-section">
-        <div class="input-container">
-          <input type="text" id="login" />
-          <label for="login">로그인</label>
-          <input type="text" id="password" />
-          <label for="password">비밀번호</label>
+        <div class="login-input-container">
+          <div class="input-id">
+            <input type="text" id="login" />
+            <label for="login">로그인</label>
+          </div>
+          <div class="input-password">
+            <input type="password" id="password" />
+            <label for="password">비밀번호</label>
+          </div>
+          <button class="submit-btn" type="submit">완료</button>
+          <a href="/">메인으로</a>
         </div>
       </section>
     </main>

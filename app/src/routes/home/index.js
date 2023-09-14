@@ -5,9 +5,11 @@ const router = express.Router()
 
 const controller = require("./home.ctrl")
 
-const { home, login } = controller
+const { output, process } = controller
 
-router.get("/", home)
-router.get("/login", login)
+router.get("/", output.home)
+router.get("/login", output.login)
+
+router.post("/login", process.login)
 
 module.exports = router
