@@ -4,29 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/reset.css">
+  <link rel="stylesheet" href="/assets/index.css">
 
   <script defer src="/js/home/login.js"></script>
-  <title>Document</title>
+  <title>로그인</title>
 </head>
 
 <body>
   <div id="wrap">
     <main id="content">
-      <h1>로그인화면</h1>
-      <section class="login-section">
-        <div class="login-input-container">
-          <div class="input-id">
-            <input type="text" id="login" />
-            <label for="login">로그인</label>
+      <div class="common-container">
+        <h1>로그인화면</h1>
+        <section class="login-section">
+          <div class="login-input-container">
+            <div class="input-id">
+              <label for="login">로그인</label>
+              <input type="text" id="login" />
+            </div>
+            <div class="input-password">
+              <label for="password">비밀번호</label>
+              <input type="password" id="password" />
+            </div>
+            <button class="submit-btn" type="submit">완료</button>
+            <a href="/">메인으로</a>
+            <a href="/register">회원가입</a>
           </div>
-          <div class="input-password">
-            <input type="password" id="password" />
-            <label for="password">비밀번호</label>
-          </div>
-          <button class="submit-btn" type="submit">완료</button>
-          <a href="/">메인으로</a>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
   </div>
 </body>

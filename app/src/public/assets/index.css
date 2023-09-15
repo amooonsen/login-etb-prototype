@@ -1,0 +1,37 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.hide-txt {
+  display:inline-block;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  font-size: 1px;
+  line-height: 0;
+  clip:rect(1px 1px 1px 1px);
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.common-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.common-container > h1 {
+  font-size: 36px;
+  font-weight: 700;
+}

@@ -9,6 +9,8 @@ const { output, process } = controller
 
 router.get("/", output.home)
 router.get("/login", output.login)
+router.get("/register", output.register)
+
 
 router.post("/login", process.login)
 
