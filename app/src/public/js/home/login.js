@@ -23,7 +23,15 @@ function init() {
       body: JSON.stringify(req)
     })
     .then(res => res.json())
-    .then(res => console.log(res))
+    .then(res => {
+      if(res.success) {
+        location.href = "/"
+      } else {
+        alert(res.msg)
+      }
+    })
+    // ex) index.js에서 router.post가 뭔가 문제 있을 때
+    .catch((err) => console.error(err))
   };
 
   // async await

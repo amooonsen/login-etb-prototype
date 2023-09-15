@@ -1,10 +1,7 @@
 "use strict"
 
-const users = {
-  id: ['etribe01', 'etribe02', 'etribe03'],
-  password: ['1234', '1234', '1234']
-}
-
+const UserStorage = require('../../models/UserStorage')
+const User = require('../../models/User')
 
 const output = {
   home: (req, res) => {
@@ -17,21 +14,30 @@ const output = {
 
 const process = {
   login: (req, res) => {
-    const { id, password } = req.body
+    const { body } = req
+    const user = new User(body)
+    const response = user.login()
+    console.log(response)
+    // return res.json(response)
+    // const { id, password } = req.body
+    // const response = {}
 
-    if (users.id.includes(id)) {
-      const idx = users.id.indexOf(id)
-      if (users.password[idx] === password) {
-        return res.json({
-          success: true
-        })
-      }
-    }
+    // const users = UserStorage.getUsers('id', 'password')
+    
+    // if (users.id.includes(id)) {
+    //   const idx = users.id.indexOf(id)
+    //   if (users.password[idx] === password) {
+    //     response.success = true
+    //     return res.json({
+    //       success: true
+    //     })
+    //   }
+    // }
 
-    return res.json({
-      success: false,
-      msg: '로그인 실패'
-    })
+    // response.success = false
+    // response.msg = '로그인 실패'
+
+    // return res.json(response)
   }
 }
 
