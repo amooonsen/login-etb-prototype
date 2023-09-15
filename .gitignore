@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -131,4 +130,4 @@ dist
 .pnp.*
 =======
 **node_modules
->>>>>>> 9a53e0f (git init)
+

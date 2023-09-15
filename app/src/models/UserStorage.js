@@ -27,6 +27,13 @@ class UserStorage {
     }, {})
     return userInfo
   }
+
+  static save(userInfo) {
+    const users = this.#users
+    users.id.push(userInfo.id)
+    users.password.push(userInfo.password)
+    users.names.push(userInfo.name)
+  }
 }
 
 module.exports = UserStorage

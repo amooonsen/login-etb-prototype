@@ -27,7 +27,7 @@ function init() {
       if(res.success) {
         location.href = "/"
       } else {
-        alert(res.msg)
+        console.log(res.msg)
       }
     })
     // ex) index.js에서 router.post가 뭔가 문제 있을 때

@@ -19,7 +19,14 @@ const process = {
     const { body } = req
     const user = new User(body)
     const response = user.login()
-    
+
+    return res.json(response)
+  },
+  register: (req, res) => {
+    const { body } = req
+    const user = new User(body)
+    const response = user.register()
+
     return res.json(response)
   }
 }

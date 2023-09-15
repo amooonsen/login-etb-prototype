@@ -11,14 +11,17 @@ function init() {
   const handleRegister = e => {
     e.preventDefault();
 
+    if(!userId.value) return alert('아이디를 입력해주세요.')
+    if(userPassword.value !== confirmUserPassword.value) {
+      return alert('비밀번호가 일치하지 않습니다.')
+    }
+
     const req = {
       id: userId.value,
       name: userName.value,
       password: userPassword.value,
-      confirmPassword: confirmUserPassword.value
+      // confirmPassword: confirmUserPassword.value
     }
-
-    console.log(req)
 
     fetch("/register", {
       method: "POST",
@@ -30,7 +33,7 @@ function init() {
     .then(res => res.json())
     .then(res => {
       if(res.success) {
-        location.href = "/login"
+        location.href = "/"
       } else {
         alert(res.msg)
       }
